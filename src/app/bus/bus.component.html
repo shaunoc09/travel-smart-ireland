@@ -1,0 +1,17 @@
+<section class="bus-container">
+  <form (ngSubmit)="onUpdate()" #busForm="ngForm">
+    <md-input-container>
+      <input [(ngModel)]="stopBusId" mdInput placeholder="Bus Stop Number" name="BusStopNumer">
+    </md-input-container>
+    <button md-button (click)="onUpdate()">Update</button>
+  </form>
+  <md-spinner strokeWidth="10" *ngIf="!busDataLoaded"></md-spinner>
+
+  <md-list *ngIf="busDataLoaded">
+    <md-list-item *ngFor="let bus of buses">
+      {{bus.route}} is due in {{bus.duetime}} min(s) - ({{bus.arrivaldatetime}})
+    </md-list-item>
+  </md-list>
+
+  <span class="error">{{problem}}</span>
+</section>
