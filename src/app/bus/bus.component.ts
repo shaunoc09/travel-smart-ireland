@@ -21,25 +21,24 @@ export class BusComponent implements OnInit {
     this.initaliseData();
   }
 
-  initaliseData() {
+  initaliseData(): void {
     this.service.initaliseBusPolling();
     this.service.busStopListUpdated
       .subscribe(
         buses => {
           this.buses = buses;
           this.busDataLoaded = true;
-          console.log('Loaded');
         },
         error => this.handleError(error)
       );
   }
 
-  onUpdate() {
+  onUpdate(): void {
     this.busDataLoaded = false;
     this.service.stopId = this.stopBusId;
   }
 
-  handleError(error: string) {
+  handleError(error: string): void {
     this.problem = 'Uh oh! Somethings gone wrong loading bus list :(';
     console.error('Somethings gone wrong :( ', error);
   }
