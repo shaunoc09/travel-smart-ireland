@@ -29,7 +29,9 @@ export class BusComponent implements OnInit {
           this.buses = buses;
           this.busDataLoaded = true;
         },
-        error => this.handleError(error)
+        error => {
+          this.busDataLoaded = true;
+          this.handleError(error)}
       );
   }
 
