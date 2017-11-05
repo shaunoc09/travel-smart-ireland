@@ -1,4 +1,4 @@
-import { DataService } from './../services/data-service.service';
+import { DataService } from './../services/data.service';
 import { BusStop } from './../models/bus-stop.model';
 import { Component, OnInit } from '@angular/core';
 
