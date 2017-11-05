@@ -11,9 +11,9 @@ import { Component, OnInit } from '@angular/core';
 export class BusComponent implements OnInit {
 
   private buses: Array<BusStop>;
-  private stopBusId = 7127;
-  private busDataLoaded = false;
-  private problem: string;
+  public stopBusId = 7127;
+  public busDataLoaded = false;
+  public problem: string;
   constructor(private service: DataService) { }
 
   ngOnInit() {

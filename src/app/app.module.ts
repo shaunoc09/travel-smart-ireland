@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdButtonModule, MdInputModule, MdListModule, MdProgressSpinnerModule } from '@angular/material';
+import { MatButtonModule, MatInputModule, MatListModule, MatProgressSpinnerModule,MatFormFieldModule } from '@angular/material';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 
@@ -16,10 +16,11 @@ import { BusComponent } from './bus/bus.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MdButtonModule,
-    MdInputModule,
-    MdListModule,
-    MdProgressSpinnerModule,
+    MatButtonModule,
+    MatInputModule,
+    MatListModule,
+    MatFormFieldModule,
+    MatProgressSpinnerModule,
     HttpModule,
     FormsModule
   ],
